@@ -4,7 +4,10 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="myFortune" class="com.ioc.inversionofControl.sports.HappyFortune">
+    </bean>
     <bean id="myCoach" class ="com.ioc.inversionofControl.sports.Baseball">
+        <constructor-arg ref="myFortune"></constructor-arg>
     </bean>
 
 </beans>
