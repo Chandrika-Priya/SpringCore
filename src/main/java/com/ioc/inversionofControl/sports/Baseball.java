@@ -2,7 +2,7 @@ package com.ioc.inversionofControl.sports;
 
 import org.springframework.stereotype.Component;
 
-@Component("baseballCoach")
+@Component
 public class Baseball implements Coach {
 
     @Override
