@@ -9,7 +9,7 @@
     <context:property-placeholder location="application.properties"></context:property-placeholder>
     <bean id="myFortune" class="com.ioc.inversionofControl.sports.HappyFortune">
     </bean>
-    <bean id="myCoach" class ="com.ioc.inversionofControl.sports.Baseball">
+    <bean id="myCoach" class ="com.ioc.inversionofControl.sports.Baseball" scope="prototype">
         <constructor-arg ref="myFortune"></constructor-arg>
     </bean>
     <bean id="myCricketCoach" class ="com.ioc.inversionofControl.sports.Cricket">
