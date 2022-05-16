@@ -5,12 +5,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Baseball implements Coach {
-    private Fortune fortune;
-
     @Autowired
-    public void addFortune(Fortune fortune) {
-        this.fortune = fortune;
-    }
+    private Fortune fortune;
 
     @Override
     public String getDetails() {
