@@ -9,5 +9,10 @@
     <bean id="myCoach" class ="com.ioc.inversionofControl.sports.Baseball">
         <constructor-arg ref="myFortune"></constructor-arg>
     </bean>
+    <bean id="myCricketCoach" class ="com.ioc.inversionofControl.sports.Cricket">
+        <property name="fortune" ref="myFortune"></property> <!-- this will call setFortune method
+        method name will be derived from the name=""-->
+        <property name="team" value="csk"></property>
+    </bean>
 
 </beans>
