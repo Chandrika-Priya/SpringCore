@@ -3,6 +3,14 @@ package com.ioc.inversionofControl.sports;
 public class Baseball implements Coach {
     private Fortune fortune;
 
+    public void baseballInit(){
+        System.out.println("initialising");
+    }
+
+    public void baseballDestroy(){
+        System.out.println("destroying");
+    }
+
     public Baseball(Fortune fortune) {
         this.fortune = fortune;
     }
