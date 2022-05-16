@@ -1,23 +1,12 @@
 package com.ioc.inversionofControl.sports;
 
+import org.springframework.stereotype.Component;
+
+@Component("baseballCoach")
 public class Baseball implements Coach {
-    private Fortune fortune;
-
-    public void baseballInit(){
-        System.out.println("initialising");
-    }
-
-    public void baseballDestroy(){
-        System.out.println("destroying");
-    }
-
-    public Baseball(Fortune fortune) {
-        this.fortune = fortune;
-    }
 
     @Override
     public String getDetails() {
-        System.out.println(fortune.getFortune());
         return "Base Ball ";
     }
 }

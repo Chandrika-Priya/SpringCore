@@ -10,12 +10,8 @@ public class InversionofControlApplication {
 	public static void main(String[] args) {
 		//SpringApplication.run(InversionofControlApplication.class, args);
 		ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-		Coach coach = applicationContext.getBean("myCoach",Coach.class);
-		Coach anotherCoach = applicationContext.getBean("myCoach",Coach.class);
-		System.out.println(coach==anotherCoach);
-		Coach cricketCoach = applicationContext.getBean("myCricketCoach",Coach.class);
+		Coach coach = applicationContext.getBean("baseballCoach",Coach.class);
 		System.out.println(coach.getDetails());
-		System.out.println(cricketCoach.getDetails());
 		applicationContext.close();
 	}
 
