@@ -7,12 +7,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 @SpringBootApplication
 public class InversionofControlApplication {
 
-	public static void main(String[] args) {
-		//SpringApplication.run(InversionofControlApplication.class, args);
-		ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-		Coach coach = applicationContext.getBean("baseball",Coach.class);
-		System.out.println(coach.getDetails());
-		applicationContext.close();
-	}
+    public static void main(String[] args) {
+        //SpringApplication.run(InversionofControlApplication.class, args);
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+        Coach coach = applicationContext.getBean("baseball", Coach.class);
+        System.out.println(coach.getDetails());
+        applicationContext.close();
+    }
 
 }
