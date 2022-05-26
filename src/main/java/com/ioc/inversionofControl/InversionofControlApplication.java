@@ -13,6 +13,7 @@ public class InversionofControlApplication {
         //ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(BeansConfig.class);
         Coach coach = applicationContext.getBean("baseball", Coach.class);
+        //System.out.println(coach.getDetails());
         System.out.println(coach.getDetails());
         applicationContext.close();
     }
